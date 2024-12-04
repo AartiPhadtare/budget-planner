@@ -1,0 +1,47 @@
+<div class="topnavbar py-4">
+    <div class="fluid-container">
+        <h2 class="text-center text-uppercase text-white">Budget Planner</h2>
+    </div>
+
+</div>
+<div class="login-section">
+    <div class="container">
+        <div class="col-md-6 m-auto forms-wrap">
+
+            <!-- login -->
+             <form *ngIf="activeForm === 'login' " [formGroup]="loginForm" (ngSubmit)="login()" class="text-center">
+                <h2 class="text-center mb-4">Login</h2>
+                <div class="form-group mb-3">
+                    <input class="form-control" type="email" formControlName="email" placeholder="Email">
+                </div>
+                <div class="form-group mb-3">
+                    <input class="form-control" type="password" formControlName="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3 submtbtn">Login</button>
+                <p (click)="toggleForm('register')">Don't have an account?
+                    <span class="highlighted"><u>Register</u></span>
+                </p>
+        
+        
+             </form>
+             <!-- register -->
+             <form *ngIf="activeForm === 'register'" [formGroup]="registerForm" (ngSubmit)="register()" class="text-center">
+                <h2 class="text-center mb-4">Register</h2>
+                <div class="form-group mb-3">
+                    <input class="form-control" type="text" formControlName="username" placeholder="Username">
+                </div>
+                <div class="form-group mb-3">
+                    <input class="form-control" type="email" formControlName="email" placeholder="Email">
+                </div>
+                <div class="form-group mb-3">
+                    <input class="form-control" type="password" formControlName="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3 submtbtn">Register</button>
+                <p (click)="toggleForm('login')"> Don't have an account?
+                    <span class="highlighted"><u>Login</u></span>
+                </p>
+        
+             </form>
+        </div>
+    </div>
+</div>

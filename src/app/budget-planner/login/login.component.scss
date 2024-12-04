@@ -1,0 +1,27 @@
+
+.topnavbar{
+    background: linear-gradient(135deg, #0a87e5, #19F7F4);
+}
+.login-section {
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submtbtn{
+    background: linear-gradient(135deg, #0a87e5, #19F7F4);
+    border: 0;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+}
+.forms-wrap {
+    padding: 5rem 2rem;
+    box-shadow: 0px 2px 20px 11px #8080801a;
+}
+input.form-control {
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #0a87e5cf;
+}
+span.highlighted {
+    cursor: pointer;
+}
