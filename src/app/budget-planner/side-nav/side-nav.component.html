@@ -10,3 +10,13 @@
         
     </div>
 </div>
+
+<div class="side-nav-panel" [class.slide-out]="isSlideOut">
+    <div class="slide-out-content">
+        <h3 class="nav text-center mb-4 text-white">Budget planner</h3>
+        <p class="edit-col" (click)="onDash()">Dashboard</p>
+        <p class="edit-col" (click)="onProfile()">Profile</p>
+        <p class="edit-col" (click)="onHistory()">Prev History</p>
+        <p class="edit-col" (click)="onLogout()">Log Out</p>
+    </div>
+</div>

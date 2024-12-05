@@ -1,0 +1,120 @@
+
+<app-side-nav></app-side-nav>
+<div class="container pt-5">
+    <div class="card-list d-md-flex justify-content-center flex-wrap">
+        <!-- Income card -->
+        <div class="card" >
+            <div class="card-body">
+              <div class="card-header  d-flex align-items-center">
+                <span class="icon income-icon"><mat-icon>attach_money</mat-icon> </span>
+                <h2>Income</h2>
+              </div>
+              <div class="income-details">
+                <div class="month pb-3">
+                    <h4 class="subheading">Current Month</h4>
+                    <p>{{ currentMonthIncome }}</p>
+                </div>
+                <div class="month ">
+                    <h4 class="subheading">Last Few Months</h4>
+                    <ul class="">
+                        <li *ngFor="let monthIncome of lastMonthsIncome">{{ monthIncome }}</li>
+                    </ul>
+                </div>
+               
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-view btn-lg" (click)="onIncome()">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expense Card -->
+
+          <div class="card" >
+            <div class="card-body">
+              <div class="card-header  d-flex align-items-center">
+                <span class="icon expense-icon"><mat-icon>money_off</mat-icon> </span>
+                <h2>Expense</h2>
+              </div>
+              <div class="expense-details">
+                <div class="month pb-3">
+                    <h4 class="subheading">Current Month</h4>
+                    <p>{{ currentMonthExpense }}</p>
+                </div>
+                <div class="month ">
+                    <h4 class="subheading">Last Few Months</h4>
+                    <ul class="">
+                        <li *ngFor="let monthIncome of lastMonthsExpense">{{ monthIncome }}</li>
+                    </ul>
+                </div>
+               
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-view btn-lg" (click)="onExpense()">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ToDo Transaction -->
+          <div class="card" >
+            <div class="card-body">
+              <div class="card-header  d-flex align-items-center">
+                <span class="icon todo-icon"><mat-icon>assignment</mat-icon> </span>
+                <h2>To Do Transaction</h2>
+              </div>
+              <div class="todo-details">
+                <div class="month ">
+                    <h4 class="subheading">Last Few Months</h4>
+                    <ul class="pt-3">
+                        <li *ngFor="let item of todoTransaction" class="d-flex ">
+                            <span class="transaction-status">
+                                <mat-icon class="text-info">hourglass_empty</mat-icon>
+                            </span>
+                            <p class="todo-list">
+                                {{ item.description }}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-view btn-lg" (click)="onTodo()">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+         <!-- Total -->
+         <div class="card" >
+            <div class="card-body">
+              <div class="card-header  d-flex align-items-center">
+                <span class="icon total-icon"><mat-icon>timeline</mat-icon> </span>
+                <h2>Total income</h2>
+              </div>
+              <div class="total-details">
+                <div class="total-items pb-2 pt-3 d-flex align-items-center">
+                <span class="icon total-icon"><mat-icon>attach_money</mat-icon> </span>
+                    <h5 class="mb-0">Current Month Income &nbsp;</h5>
+                    <p class="mb-0">{{ totalCurrentMonthIncome | currency }}</p>
+                </div>
+                
+                <div class="total-items d-flex align-items-center">
+                    <span class="icon total-icon"><mat-icon>money_off</mat-icon> </span>
+                    <h5 class="mb-0">Current Month Expense &nbsp;</h5>
+                    <p class="mb-0">{{ totalCurrentMonthExpense | currency }}</p>
+                </div>
+                <hr>
+                <div class="total-items d-flex align-items-center">
+                    <span class="icon total-icon"><mat-icon>account_balance_wallet</mat-icon> </span>
+                    <h5 class="mb-0">Current Month Savings &nbsp;</h5>
+                    <p class="mb-0">{{ currentMonthSavings | currency }}</p>
+                </div>
+                <!-- <div class="d-flex justify-content-end">
+                    <button class="btn btn-view btn-lg" (click)="onTodo()">View</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>

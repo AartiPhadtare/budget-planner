@@ -1,0 +1,54 @@
+.card {
+    width: 40%;
+    margin: 2rem;
+    box-shadow: 6px 6px 20px lightgrey;
+    border: 0;
+    color: #5e5d5d;
+    transition: all 1s linear 0s;
+    overflow: hidden;
+    position: relative;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+button.btn.btn-view {
+    color: white;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #0a87e5, #13c9ee);
+}
+.card .icon {
+    background: #0d99e8a1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0.7rem;
+    margin-right: 1rem;
+}
+.income-details, .expense-details, .todo-details {
+    padding: 1.5rem 0 0;
+}
+.month li, .month p {
+    font-size: 1.2rem;
+    list-style: none;
+    padding-left: 0;
+}
+h4.subheading {
+    color: #14d1ef;
+}
+.month ul {
+    padding-left: 0;
+}
+.card-header {
+    color: #0b8ee6;
+    background: transparent;
+    padding-left: 0;
+}
+
+@media screen and (max-width:767px) {
+    .card{
+        width: 100%;
+        margin: 2rem 0rem;
+    }
+}
