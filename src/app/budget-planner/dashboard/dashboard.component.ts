@@ -39,7 +39,7 @@ totalCurrentMonthExpense = 800;
     this.router.navigate(['/budget-planner/income']);
   }
   onExpense(){
-    this.router.navigate(['/budget-planner/income']);
+    this.router.navigate(['/budget-planner/expense']);
   }
 
   onTodo(){
