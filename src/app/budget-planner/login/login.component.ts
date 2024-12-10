@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar'
+import { response } from 'express';
 
 @Component({
   selector: 'app-login',
@@ -42,7 +43,7 @@ export class LoginComponent {
   login(){
     if(this.loginForm.valid){
       console.log(" login info ==> ", this.loginForm.value);
-      this.router.navigate(['/budget-planner/login']);
+      this.router.navigate(['/budget-planner/dashboard']);
 
     }else{
       this.snackBar.open('invalid email or password', 'Close', {duration: 3000})
@@ -59,5 +60,6 @@ export class LoginComponent {
     } else{
       this.snackBar.open('please fill in all fields correctly!', 'Close', {duration:3000});
     }
+    
   }
 }
